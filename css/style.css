@@ -87,6 +87,11 @@ a{
 header {
     background: var(--primary-color);
     padding: 1rem 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    width: 100%;
 }
 
 .logo img {
@@ -134,3 +139,69 @@ nav ul li:hover::before {
     width: 70%;
 }
 /* =================HEader end ================= */
+
+/* =================Showcase Start ================= */
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.swiper {
+    height: 100vh;
+}
+
+.slide-container {
+    width: 100%;
+}
+.slide-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-family: "ubuntu";
+    transform: translate(-50%,-50%); /*To move the overlay into the center without using display flex */
+}
+
+.img-overlay p {
+    font-size: 1rem;
+    letter-spacing: 8px;
+    color: var(--white-color);
+}
+
+.img-overlay h2 {
+    font-size: 5rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.img-overlay span {
+
+}
+/* =================Showcase End ================= */
+
