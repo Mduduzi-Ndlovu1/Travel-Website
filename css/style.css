@@ -555,19 +555,25 @@ form input, select {
 /* ==========Video Background Costa Victorial start ======*/ 
 #costa-victoria {
     padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    max-height: 750px; /* Ensure the container has a max-height */
 }
 
 #costa-victoria video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    max-height: 550px;
+    transform: translate(-50%, -50%);
 }
 
 .video-bg {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .video-bg::before {
@@ -578,6 +584,56 @@ form input, select {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-
+    z-index: 1; /* Ensure the overlay is above the video */
 }
-/* ==========Video Background Costa Victorial End ======*/ 
+
+.video-content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+    color: var(--white-color);
+    text-align: center; /* Center the content */
+}
+
+.video-content h2 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: var(--white-color);
+    font-family: "ubuntu";
+    margin-bottom: 1rem;
+}
+
+.video-content span {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+}
+
+/* ==========Video Background Costa Victorial End ======*/  
+
+/* ==========Travel COunries Start ======*/  
+#travel-countries {
+    padding: 6rem 0; 
+}
+
+.travel-countries-wrapper{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 2rem;
+    width: 100%;
+}
+
+.countries-content {
+    margin-top:  2rem; 
+}
+
+.countries-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.countries-content ul li {
+    margin: 1.5rem 0;
+}
+/* ==========Travel COuntries End ======*/  

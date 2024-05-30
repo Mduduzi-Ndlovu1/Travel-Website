@@ -122,4 +122,20 @@
     .static-wrapper {
         grid-template-columns: repeat(2,1fr);
     }
+
+    .video-content h2 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        
+    }
+
+    .video-content span {
+        font-size: 1rem;
+    }
+
+    #costa-victoria {
+        padding: 4rem;
+        position: relative;
+        
+    }
 }
