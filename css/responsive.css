@@ -138,4 +138,15 @@
         position: relative;
         
     }
+
+    /* Travel counries start */
+    .travel-countries-wrapper{
+        grid-template-columns: 2fr;
+        
+    }
+
+    .france-content{
+        grid-template-columns: 2fr;
+
+    }
 }
